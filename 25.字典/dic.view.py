@@ -1,0 +1,30 @@
+#获取字典视图的方法
+#字典名.keys():获取字典中所有的键
+#字典名.values():获取字典中所有的值
+#字典名.items():获取字典中所有的键值对
+print('获取字典视图的方法')
+sorces={'张三':50,'李四':60,'王五':70}
+key=sorces.keys()
+print(key,type(key))
+print('转成列表',list(key))#此操作将所有的键的视图转换为列表
+val=sorces.values()
+print(val,type(val))
+print('转成列表',list(val))
+it=sorces.items()
+print(it,type(it))
+print('转成列表',list(it))#转换之后的列表是由元组为元素组成的
+print('-------')
+print('字典元素的遍历')
+'''语法结构: for item in 字典:
+                print（item）'''
+sorces={'张三':50,'李四':60,'王五':70}
+for i in sorces:
+    print(i)#这样是只输出键
+    print(i,sorces[i],sorces.get(i))#i后面是获取字典值的两种方式
+print('------')
+#总结一下字典的特点
+#1.字典中的所有元素都是键-值对，键不允许重复，但值可以重复
+#2.字典中的元素是无序的
+#3.字典中的键必须是不可变对象（eg:整数，字符串）
+#4.字典也可以根据需要动态伸缩
+#5.字典会浪费较大的内存，是一种以空间换时间的数据结构
